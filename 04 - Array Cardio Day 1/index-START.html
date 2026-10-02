@@ -54,7 +54,11 @@
     console.log(inventors);
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
+    let sumYears = inventors.reduce((sum, element) => {
+      return sum + (element.passed - element.year);
+    }, 0);
 
+    console.log(sumYears);
     // 5. Sort the inventors by years lived
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
